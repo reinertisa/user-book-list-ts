@@ -13,22 +13,7 @@ type ThemeContextType = {
     toggleTheme: () => void
 }
 
-const themeInitialValues: ThemeContextType = {
-    isLightTheme: true,
-    light: {
-        syntax: '#555',
-        bg: '#ddd',
-        ui: '#eee',
-    },
-    dark: {
-        syntax: '#ddd',
-        bg: '#333',
-        ui: '#555',
-    },
-    toggleTheme: () => {}
-}
-
-export const ThemeContext = createContext(themeInitialValues)
+export const ThemeContext = createContext({} as ThemeContextType)
 
 type ThemeContextProviderProps = {
     children: React.ReactNode,
