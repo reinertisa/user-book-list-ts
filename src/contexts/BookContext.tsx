@@ -7,11 +7,13 @@ type BookContextType = {
     removeBook: (id: string) => void
 }
 
-export const BookContext = createContext<BookContextType>({
+const bookInitialValues: BookContextType = {
     books: [],
-    addBook: () => {},
-    removeBook: () => {}
-});
+    addBook: (): void => {},
+    removeBook: (): void => {}
+}
+
+export const BookContext = createContext(bookInitialValues);
 
 
 type BookContextProviderProps = {

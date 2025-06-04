@@ -5,10 +5,12 @@ type AuthContextType = {
     toggleAuth: () => void
 }
 
-export const AuthContext = createContext<AuthContextType>({
+const authInitialValues: AuthContextType = {
     isAuthenticated: false,
     toggleAuth: (): void => {}
-});
+}
+
+export const AuthContext = createContext(authInitialValues);
 
 type AuthContextProviderProps = {
     children: React.ReactNode
